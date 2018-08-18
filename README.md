@@ -11,4 +11,5 @@ javac -cp . src\main\java\org\springerNature\cordinates\*.java
 javac -cp . src\main\java\org\springerNature\validation\IValidate.java
 javac -cp . src\main\java\org\springerNature\constants\ConstantsUtil.java src\main\java\org\springerNature\validation\*.java
 javac -cp . src\main\java\org\springerNature\canvas\*.java src\main\java\org\springerNature\constants\*.java src\main\java\org\springerNature\cordinates\*.java src\main\java\org\springerNature\validation\*.java src\main\java\org\springerNature\example\App.java
-4. cd src
+4. cd src\main\java
+5.java org.springerNature.example.App
