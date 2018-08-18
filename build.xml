@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="SpringerNatureTest">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="D:/Eclipse/eclipse-j2ee-mars/"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="C:/Users/Stas/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar"/>
+    </path>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="SpringerNatureTest.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+    </path>
+    <path id="run.App (1).classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.AppTest (1).classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ValidationTest.classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.CanvasDrawerTest.classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.LineDrawerTest.classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.RectangleDrawerTest.classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.FillAreaDrawerTest.classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.org.springerNature.canvas.classpath">
+        <path refid="SpringerNatureTest.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <classpath refid="SpringerNatureTest.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <classpath refid="SpringerNatureTest.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="App (1)">
+        <java classname="org.springerNature.example.App" failonerror="true" fork="yes">
+            <classpath refid="run.App (1).classpath"/>
+        </java>
+    </target>
+    <target name="AppTest (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.springerNature.example.AppTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.AppTest (1).classpath"/>
+        </junit>
+    </target>
+    <target name="ValidationTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.springerNature.validation.ValidationTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.ValidationTest.classpath"/>
+        </junit>
+    </target>
+    <target name="CanvasDrawerTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.springerNature.canvas.CanvasDrawerTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.CanvasDrawerTest.classpath"/>
+        </junit>
+    </target>
+    <target name="LineDrawerTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.springerNature.canvas.LineDrawerTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.LineDrawerTest.classpath"/>
+        </junit>
+    </target>
+    <target name="RectangleDrawerTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.springerNature.canvas.RectangleDrawerTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.RectangleDrawerTest.classpath"/>
+        </junit>
+    </target>
+    <target name="FillAreaDrawerTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.springerNature.canvas.FillAreaDrawerTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.FillAreaDrawerTest.classpath"/>
+        </junit>
+    </target>
+    <target name="org.springerNature.canvas">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.springerNature.canvas.CanvasDrawerTest" todir="${junit.output.dir}"/>
+            <test name="org.springerNature.canvas.FillAreaDrawerTest" todir="${junit.output.dir}"/>
+            <test name="org.springerNature.canvas.LineDrawerTest" todir="${junit.output.dir}"/>
+            <test name="org.springerNature.canvas.RectangleDrawerTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.org.springerNature.canvas.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
