@@ -4,7 +4,7 @@ coding challenge for Springer Nature (Berlin)
 1. download project as ZIP
 2. extract it
 3. cd into the extracted directory
-4. run : 
+4. run :  
 javac -cp . src\main\java\org\springerNature\canvas\IDrawer.java  
 javac -cp . src\main\java\org\springerNature\canvas\*.java  
 javac -cp . src\main\java\org\springerNature\constants\*.java  
