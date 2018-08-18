@@ -5,8 +5,8 @@ coding challenge for Springer Nature (Berlin)
 2. extract it
 3. navigate to : src\main\java\org\springerNature
 4. run:
-  javac -cp . canvas\IDrawer.java
-  javac -cp . canvas\*.java
+  a. javac -cp . canvas\IDrawer.java
+  b. javac -cp . canvas\*.java
   javac -cp . constants\*.java
   javac -cp . cordinates\*.java
   javac -cp . validation\IValidate.java
