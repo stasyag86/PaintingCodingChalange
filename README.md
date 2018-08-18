@@ -6,7 +6,7 @@ coding challenge for Springer Nature (Berlin)
 3. cd into the extracted directory
 4. run :  
 javac -cp . src\main\java\org\springerNature\canvas\IDrawer.java  
-javac -cp . src\main\java\org\springerNature\canvas\*.java  
+javac -cp . src\main\java\org\springerNature\canvas\\*.java  
 javac -cp . src\main\java\org\springerNature\constants\*.java  
 javac -cp . src\main\java\org\springerNature\cordinates\*.java  
 javac -cp . src\main\java\org\springerNature\validation\IValidate.java  
