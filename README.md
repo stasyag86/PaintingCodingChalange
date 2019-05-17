@@ -1,5 +1,4 @@
 # CodeChallengeStas
-coding challenge for Springer Nature (Berlin)
 
 1. download project as ZIP
 2. extract it
