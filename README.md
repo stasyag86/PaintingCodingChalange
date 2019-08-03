@@ -1,4 +1,4 @@
-# CodeChallengeStas
+# Code Challenge
 
 1. download project as ZIP
 2. extract it
